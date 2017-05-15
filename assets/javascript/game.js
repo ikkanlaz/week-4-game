@@ -36,6 +36,7 @@ $(document).ready(function () {
             isDefeated: false
         }
     }
+    //assigning all objects in characterObjects to a list so it is iteratable 
     var characterList = [characterObjects.yoda, characterObjects.hanSolo, characterObjects.darthVader, characterObjects.bobaFett];
 
 
@@ -53,11 +54,13 @@ $(document).ready(function () {
         updateHealth();
     }
 
+    //updates the text on page related to health stats
     function updateHealth() {
         $("#selected-character-health").text(characterObjects[selectedCharacter].health);
         $("#current-opponent-health").text(characterObjects[currentOpponent].health);
     }
 
+    //updates the opponent when a new one is needed
     function updateOpponents() {
         $("#selected-opponent-image").attr("src", characterObjects[currentOpponent].imgUrl);
         $(".game-directive").text("Defeat " + characterObjects[currentOpponent].name);

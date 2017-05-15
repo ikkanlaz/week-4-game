@@ -61,7 +61,7 @@ body {
 }
 
 .fa-heart {
-    color: red;
+    color: rgba(255, 0, 0, 0.5);
 }
 
 .health {
