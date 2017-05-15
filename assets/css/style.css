@@ -1,0 +1,211 @@
+body {
+    font-family: 'News Cycle', sans-serif;
+    color: #ff6;
+    background-image: url(../images/ep_naturalblack.png);
+}
+
+#logo {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.character-select-directive, .game-directive {
+    text-align: center;
+    color: rgb(75, 213, 238);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#character-select {
+    margin: 20px 0;
+}
+
+.character-image {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    /*background-color: #000000;*/
+    /*border: green solid 3px;*/
+}
+
+.character-image-container{
+    margin-top: 30px;
+}
+
+.page-header {
+    height: 10%;
+    border-bottom: none;
+}
+
+#remaining-opponents-container {
+    display: none;
+}
+
+#fight-container {
+    display: none;
+    /*background-image: url(../images/death-star.png);*/
+}
+
+#selected-character-image {
+    max-height: 256px;
+    width: auto;
+}
+
+.panel {
+    background-color: transparent;
+}
+
+.panel-title {
+    color: rgb(75, 213, 238);
+}
+
+.character-image:hover {
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: image-pulse;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s;
+    animation-name: image-pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes image-pulse {
+    0% {
+        -webkit-filter: brightness(97%);
+    }
+    5% {
+        -webkit-filter: brightness(95%);
+    }
+    10% {
+        -webkit-filter: brightness(93%);
+    }
+    15% {
+        -webkit-filter: brightness(91%);
+    }
+    20% {
+        -webkit-filter: brightness(88%);
+    }
+    25% {
+        -webkit-filter: brightness(85%);
+    }
+    30% {
+        -webkit-filter: brightness(82%);
+    }
+    35% {
+        -webkit-filter: brightness(80%);
+    }
+    40% {
+        -webkit-filter: brightness(78%);
+    }
+    45% {
+        -webkit-filter: brightness(76%);
+    }
+    50% {
+        -webkit-filter: brightness(75%);
+    }
+    55% {
+        -webkit-filter: brightness(76%);
+    }
+    60% {
+        -webkit-filter: brightness(78%);
+    }
+    65% {
+        -webkit-filter: brightness(80%);
+    }
+    70% {
+        -webkit-filter: brightness(83%);
+    }
+    75% {
+        -webkit-filter: brightness(85%);
+    }
+    80% {
+        -webkit-filter: brightness(88%);
+    }
+    85% {
+        -webkit-filter: brightness(91%);
+    }
+    90% {
+        -webkit-filter: brightness(93%);
+    }
+    95% {
+        -webkit-filter: brightness(95%);
+    }
+    100% {
+        -webkit-filter: brightness(97%);
+    }
+}
+
+
+/* Standard syntax */
+
+@keyframes image-pulse {
+    0% {
+        -webkit-filter: brightness(97%);
+    }
+    5% {
+        -webkit-filter: brightness(95%);
+    }
+    10% {
+        -webkit-filter: brightness(93%);
+    }
+    15% {
+        -webkit-filter: brightness(91%);
+    }
+    20% {
+        -webkit-filter: brightness(88%);
+    }
+    25% {
+        -webkit-filter: brightness(85%);
+    }
+    30% {
+        -webkit-filter: brightness(82%);
+    }
+    35% {
+        -webkit-filter: brightness(80%);
+    }
+    40% {
+        -webkit-filter: brightness(78%);
+    }
+    45% {
+        -webkit-filter: brightness(76%);
+    }
+    50% {
+        -webkit-filter: brightness(75%);
+    }
+    55% {
+        -webkit-filter: brightness(76%);
+    }
+    60% {
+        -webkit-filter: brightness(78%);
+    }
+    65% {
+        -webkit-filter: brightness(80%);
+    }
+    70% {
+        -webkit-filter: brightness(83%);
+    }
+    75% {
+        -webkit-filter: brightness(85%);
+    }
+    80% {
+        -webkit-filter: brightness(88%);
+    }
+    85% {
+        -webkit-filter: brightness(91%);
+    }
+    90% {
+        -webkit-filter: brightness(93%);
+    }
+    95% {
+        -webkit-filter: brightness(95%);
+    }
+    100% {
+        -webkit-filter: brightness(97%);
+    }
+}
