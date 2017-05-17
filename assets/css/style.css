@@ -1,6 +1,7 @@
 body {
     font-family: 'News Cycle', sans-serif;
-    color: #ff6;
+    /*color: #ff6;*/
+    color: rgb(75, 213, 238);
     background-image: url(../images/ep_naturalblack.png);
 }
 
@@ -27,8 +28,6 @@ body {
     display: block;
     margin: auto;
     max-width: 100%;
-    /*background-color: #000000;*/
-    /*border: green solid 3px;*/
 }
 
 .character-image-container {
@@ -42,6 +41,8 @@ body {
 
 #remaining-opponents-container {
     display: none;
+    /*border: rgba(255, 255, 255, 0.2) solid 2px;*/
+    background-color: rgba(255, 255, 255, 0.075);
 }
 
 #fight-container {
@@ -79,13 +80,17 @@ body {
     border: rgba(255, 0, 0, 0.5) solid 2px;
 }
 
+#attack-button:focus {
+    outline: none;
+}
+
 #game-log-container {
     margin-top: 30px;
 }
 
 .game-log {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .green-circle {
@@ -108,12 +113,11 @@ body {
 .panel-title {
     font-size: 30px;
     color: rgb(75, 213, 238);
+    text-align: center;
 }
 
 .remaining-opponent-image {
-    height: 100px;
-    width: auto;
-    margin: auto;
+    height: auto;
 }
 
 .character-image:hover {
