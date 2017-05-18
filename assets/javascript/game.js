@@ -3,34 +3,36 @@ $(document).ready(function () {
     var currentOpponent;
     var gameStarted;
     var enableCharacterSelect = true;
+    var selectedCharacterBaseAttackPower;
+    var attackNumber = 1;
     var characterObjects = {
         yoda: {
             name: "Yoda",
-            health: 180,
+            health: 280,
             attackPower: 7,
-            counterAttackPower: 26,
+            counterAttackPower: 11,
             imgUrl: "assets/images/yoda.png",
             isDefeated: false
         },
         hanSolo: {
             name: "Han Solo",
-            health: 120,
+            health: 180,
             attackPower: 9,
-            counterAttackPower: 22,
+            counterAttackPower: 20,
             imgUrl: "assets/images/han-solo.png",
             isDefeated: false
         },
         darthVader: {
             name: "Darth Vader",
-            health: 150,
+            health: 240,
             attackPower: 8,
-            counterAttackPower: 24,
+            counterAttackPower: 21,
             imgUrl: "assets/images/darth-vader.png",
             isDefeated: false
         },
         ackbar: {
             name: "Ackbar",
-            health: 100,
+            health: 140,
             attackPower: 10,
             counterAttackPower: 20,
             imgUrl: "assets/images/ackbar.png",
@@ -40,6 +42,10 @@ $(document).ready(function () {
     //assigning all objects in characterObjects to a list so it is iteratable 
     var characterList = [characterObjects.yoda, characterObjects.hanSolo, characterObjects.darthVader, characterObjects.ackbar];
 
+    $("#yoda-health").text(characterObjects.yoda.health);
+    $("#han-solo-health").text(characterObjects.hanSolo.health);
+    $("#darth-vader-health").text(characterObjects.darthVader.health);
+    $("#ackbar-health").text(characterObjects.ackbar.health);
 
 
     function loadFightScreen() {
@@ -170,6 +176,7 @@ $(document).ready(function () {
             } else {
                 selectedCharacter = clickedCharacter;
                 console.log("You selected: " + selectedCharacter);
+                selectedCharacterBaseAttackPower = characterObjects[selectedCharacter].attackPower;
                 $(this).parent().css("display", "none");
                 $(".character-select-directive").text("Select Your Opponent");
             }
@@ -184,11 +191,13 @@ $(document).ready(function () {
                 if (selectedCharacterObj.health <= 0) {
                     gameOver();
                 } else {
+                    selectedCharacterObj.attackPower = selectedCharacterBaseAttackPower * attackNumber;
+                    attackNumber++;
+                    console.log(attackNumber);
                     $("#attack-log").text("You attacked " + currentOpponentObj.name + " for " + selectedCharacterObj.attackPower + " damage.");
                     $("#counter-attack-log").text(currentOpponentObj.name + " attacked you for " + currentOpponentObj.counterAttackPower + " damage.");
                     currentOpponentObj.health = currentOpponentObj.health - selectedCharacterObj.attackPower;
                     selectedCharacterObj.health = selectedCharacterObj.health - currentOpponentObj.counterAttackPower;
-                    selectedCharacterObj.attackPower *= 2;
                     if (selectedCharacterObj.health <= 0 && currentOpponentObj.health <= 0) {
                         if (selectedCharacterObj.health >= currentOpponentObj.health) {
                             selectedCharacterObj.health = 0;

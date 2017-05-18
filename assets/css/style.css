@@ -95,13 +95,13 @@ body {
 
 .green-circle {
     border-radius: 50%;
-    height: 300px;
+    height: 250px;
     background-image:  radial-gradient(circle at center 50%, rgba(77, 192, 77, 0.5) 0%, rgba(77, 192, 77, 0) 150px);  
 }
 
 .red-circle {
     border-radius: 50%;
-    height: 300px;
+    height: 250px;
     background-image:  radial-gradient(circle at center 50%, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 150px);  
 }
 
