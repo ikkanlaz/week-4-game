@@ -193,7 +193,6 @@ $(document).ready(function () {
                 } else {
                     selectedCharacterObj.attackPower = selectedCharacterBaseAttackPower * attackNumber;
                     attackNumber++;
-                    console.log(attackNumber);
                     $("#attack-log").text("You attacked " + currentOpponentObj.name + " for " + selectedCharacterObj.attackPower + " damage.");
                     $("#counter-attack-log").text(currentOpponentObj.name + " attacked you for " + currentOpponentObj.counterAttackPower + " damage.");
                     currentOpponentObj.health = currentOpponentObj.health - selectedCharacterObj.attackPower;
